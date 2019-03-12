@@ -11,7 +11,7 @@
     <style>
         a { cursor: pointer }
     </style>
-<link rel="stylesheet" href="styles.ef881fa358f7a352af92.css"></head>
+<link rel="stylesheet" href="styles.14a69f1590d58fe9c36c.css"></head>
 <body>
   <app>
     <style>
@@ -27,14 +27,61 @@
         font-family: Quicksand;
       }
 
-     
+      .wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
+      .text {
+        color: #fbae17;
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      .bounceball {
+        position: relative;
+        display: inline-block;
+        height: 37px;
+        width: 15px;
+      }
+      .bounceball:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fbae17;
+        transform-origin: 50%;
+        animation: bounce 500ms alternate infinite ease;
+      }
+
+      @keyframes bounce {
+        0% {
+          top: 30px;
+          height: 5px;
+          border-radius: 60px 60px 20px 20px;
+          transform: scaleX(2);
+        }
+        35% {
+          height: 15px;
+          border-radius: 50%;
+          transform: scaleX(1);
+        }
+        100% {
+          top: 0;
+        }
+      }
     </style>
-    <div class="mt-5 text-center">
-  <h1 class="notfound">404. Page Not Found</h1>
-  <img class="mt-5" src="/assets/404.gif" />
-</div>
-
+    <div class="wrap">
+      <div class="loading">
+        <div class="bounceball"></div>
+        <div class="text">Loading...</div>
+      </div>
+    </div>
   </app>
-<script type="text/javascript" src="runtime.7e9a898546ede92efac2.js"></script><script type="text/javascript" src="polyfills.9f83624c7bb370dcef03.js"></script><script type="text/javascript" src="scripts.8bde5597056f6ba2f6a7.js"></script><script type="text/javascript" src="main.48fe3178f5c563554aac.js"></script></body>
+<script type="text/javascript" src="runtime.7e9a898546ede92efac2.js"></script><script type="text/javascript" src="polyfills.9f83624c7bb370dcef03.js"></script><script type="text/javascript" src="scripts.8bde5597056f6ba2f6a7.js"></script><script type="text/javascript" src="main.cc70207862b56cb58858.js"></script></body>
 </html>
